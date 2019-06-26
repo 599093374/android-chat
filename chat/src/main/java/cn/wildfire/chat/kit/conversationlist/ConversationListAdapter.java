@@ -72,7 +72,7 @@ public class ConversationListAdapter extends RecyclerView.Adapter<RecyclerView.V
         return isEmpty(this.statusNotifications) ? 0 : 1;
     }
 
-    // TODO 其实只有更新可见的那部分就可以了
+    // TODO 其实只有更新可见的部那分就可以了
     public void updateUserInfos(List<UserInfo> userInfos) {
         if (conversationInfos == null || conversationInfos.isEmpty()) {
             return;

@@ -30,6 +30,11 @@ import cn.wildfirechat.model.Conversation;
 import cn.wildfirechat.model.ConversationInfo;
 import cn.wildfirechat.model.UserInfo;
 
+/**
+ * author:xmf
+ * date:2019/6/25 0025
+ * description:会话页面
+ */
 public class ConversationListFragment extends Fragment {
     private RecyclerView recyclerView;
     private ConversationListAdapter adapter;

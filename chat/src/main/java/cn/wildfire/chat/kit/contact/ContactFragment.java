@@ -32,6 +32,11 @@ import cn.wildfire.chat.kit.user.UserViewModel;
 import cn.wildfire.chat.kit.widget.QuickIndexBar;
 import cn.wildfirechat.model.UserInfo;
 
+/**
+ * author:xmf
+ * date:2019/6/25 0025
+ * description:联系人页面
+ */
 public class ContactFragment extends BaseContactFragment implements QuickIndexBar.OnLetterUpdateListener {
     private UserViewModel userViewModel;
     private IMServiceStatusViewModel imServiceStatusViewModel;

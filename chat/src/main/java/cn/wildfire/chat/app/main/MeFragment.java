@@ -30,6 +30,11 @@ import cn.wildfire.chat.kit.user.UserViewModel;
 import cn.wildfirechat.chat.R;
 import cn.wildfirechat.model.UserInfo;
 
+/**
+ * author:xmf
+ * date:2019/6/25 0025
+ * description:我的页面
+ */
 public class MeFragment extends Fragment {
 
     @Bind(R.id.meLinearLayout)

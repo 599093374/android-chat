@@ -7,14 +7,17 @@ import android.os.Environment;
  */
 
 public interface Config {
-
-    String IM_SERVER_HOST = "wildfirechat.cn";
+//    String IM_SERVER_HOST = "wildfirechat.cn";
+    String IM_SERVER_HOST = "172.16.200.101";
     int IM_SERVER_PORT = 80;
-
-    String APP_SERVER_HOST = "wildfirechat.cn";
+//    String APP_SERVER_HOST = "wildfirechat.cn";
+    String APP_SERVER_HOST = "172.16.200.101";
     int APP_SERVER_PORT = 8888;
 
-    String ICE_ADDRESS = "turn:turn.liyufan.win:3478";
+    //    String ICE_ADDRESS = "turn:turn.liyufan.win:3478";
+//    String ICE_USERNAME = "wfchat";
+//    String ICE_PASSWORD = "wfchat";
+    String ICE_ADDRESS = "turn:qweqwe";//stun:stun.nextcloud.com:443
     String ICE_USERNAME = "wfchat";
     String ICE_PASSWORD = "wfchat";
 

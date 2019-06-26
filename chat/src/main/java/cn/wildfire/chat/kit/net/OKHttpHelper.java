@@ -18,18 +18,50 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okhttp3.logging.HttpLoggingInterceptor;
 
 /**
  * Created by imndx on 2017/12/15.
  */
 
 public class OKHttpHelper {
+//    private static OkHttpClient okHttpClient;
+
+//    static {
+//        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+//        httpClient.connectTimeout(45, TimeUnit.SECONDS); //设置连接超时
+//        httpClient.readTimeout(45, TimeUnit.SECONDS);//设置读超时
+//        httpClient.writeTimeout(45, TimeUnit.SECONDS); //设置写超时
+//        httpClient.retryOnConnectionFailure(true); //是否自动重连
+//        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+//        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+//        httpClient.addInterceptor(loggingInterceptor);
+//        okHttpClient = httpClient.build();
+//    }
+
     private static OkHttpClient okHttpClient = new OkHttpClient.Builder()
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
+            .addNetworkInterceptor(new HttpLoggingInterceptor())
             .build();
+
+
     private static Gson gson = new Gson();
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+
+//    private static void init() {
+//        if (null == okHttpClient) {
+//            OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+//            httpClient.connectTimeout(45, TimeUnit.SECONDS); //设置连接超时
+//            httpClient.readTimeout(45, TimeUnit.SECONDS);//设置读超时
+//            httpClient.writeTimeout(45, TimeUnit.SECONDS); //设置写超时
+//            httpClient.retryOnConnectionFailure(true); //是否自动重连
+//            HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+//            loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+//            httpClient.addInterceptor(loggingInterceptor);
+//            okHttpClient = httpClient.build();
+//        }
+//    }
 
     public static <T> void get(final String url, Map<String, String> params, final Callback<T> callback) {
         HttpUrl httpUrl = HttpUrl.parse(url);
@@ -45,7 +77,7 @@ public class OKHttpHelper {
                 .url(httpUrl)
                 .get()
                 .build();
-
+//        init();
         okHttpClient.newCall(request).enqueue(new okhttp3.Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -68,7 +100,7 @@ public class OKHttpHelper {
                 .url(url)
                 .post(body)
                 .build();
-
+//        init();
         okHttpClient.newCall(request).enqueue(new okhttp3.Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -91,7 +123,7 @@ public class OKHttpHelper {
                 .url(url)
                 .put(body)
                 .build();
-
+//        init();
         okHttpClient.newCall(request).enqueue(new okhttp3.Callback() {
             @Override
             public void onFailure(Call call, IOException e) {

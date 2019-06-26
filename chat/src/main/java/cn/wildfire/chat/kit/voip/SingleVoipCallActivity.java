@@ -29,6 +29,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
 import butterknife.ButterKnife;
 import cn.wildfirechat.avenginekit.AVEngineKit;
 import cn.wildfirechat.chat.R;
@@ -37,6 +38,12 @@ import cn.wildfirechat.client.NotInitializedExecption;
 /**
  * Activity for peer connection call setup, call waiting
  * and call view.
+ */
+
+/**
+ * author:xmf
+ * date:2019/6/25 0025
+ * description:音视频通话页面
  */
 public class SingleVoipCallActivity extends FragmentActivity implements AVEngineKit.CallSessionCallback {
     private static final String TAG = "P2PVideoActivity";

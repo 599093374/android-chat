@@ -17,6 +17,11 @@ import cn.wildfire.chat.kit.conversation.ConversationActivity;
 import cn.wildfirechat.chat.R;
 import cn.wildfirechat.model.Conversation;
 
+/**
+ * author:xmf
+ * date:2019/6/25 0025
+ * description:发现页面
+ */
 public class DiscoveryFragment extends Fragment {
 
     @Nullable

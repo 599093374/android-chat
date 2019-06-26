@@ -57,6 +57,11 @@ import cn.wildfirechat.model.GroupInfo;
 import cn.wildfirechat.model.UserInfo;
 import cn.wildfirechat.remote.ChatManager;
 
+/**
+ * author:xmf
+ * date:2019/6/25 0025
+ * description:单人聊天页面
+ */
 public class ConversationActivity extends WfcBaseActivity implements
         KeyboardAwareLinearLayout.OnKeyboardShownListener,
         KeyboardAwareLinearLayout.OnKeyboardHiddenListener,

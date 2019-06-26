@@ -53,6 +53,11 @@ import cn.wildfirechat.model.Conversation;
 import cn.wildfirechat.model.UserInfo;
 import q.rorbin.badgeview.QBadgeView;
 
+/**
+ * author:xmf
+ * date:2019/6/25 0025
+ * description:IM首页
+ */
 public class MainActivity extends WfcBaseActivity implements ViewPager.OnPageChangeListener {
 
     private List<Fragment> mFragmentList = new ArrayList<>(4);
@@ -149,10 +154,10 @@ public class MainActivity extends WfcBaseActivity implements ViewPager.OnPageCha
         //设置ViewPager的最大缓存页面
         mVpContent.setOffscreenPageLimit(3);
 
-        conversationListFragment = new ConversationListFragment();
-        contactFragment = new ContactFragment();
-        discoveryFragment = new DiscoveryFragment();
-        meFragment = new MeFragment();
+        conversationListFragment = new ConversationListFragment();//会话页面
+        contactFragment = new ContactFragment();//联系人页面
+        discoveryFragment = new DiscoveryFragment();//发现页面
+        meFragment = new MeFragment();//我的页面
         mFragmentList.add(conversationListFragment);
         mFragmentList.add(contactFragment);
         mFragmentList.add(discoveryFragment);
@@ -184,16 +189,16 @@ public class MainActivity extends WfcBaseActivity implements ViewPager.OnPageCha
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.search:
+            case R.id.search://全局搜索
                 showSearchPortal();
                 break;
             case R.id.chat:
-                createConversation();
+                createConversation();//发起聊天
                 break;
-            case R.id.add_contact:
+            case R.id.add_contact://添加朋友
                 searchUser();
                 break;
-            case R.id.scan_qrcode:
+            case R.id.scan_qrcode://扫一扫
                 startActivityForResult(new Intent(this, CaptureActivity.class), REQUEST_CODE_SCAN_QR_CODE);
             default:
                 break;

@@ -27,7 +27,11 @@ import cn.wildfirechat.avenginekit.AVEngineKit;
 import cn.wildfirechat.chat.R;
 import cn.wildfirechat.model.UserInfo;
 import cn.wildfirechat.remote.ChatManager;
-
+/**
+*author:xmf
+*date:2019/6/25 0025
+*description:语音通话页面
+*/
 public class AudioFragment extends Fragment implements AVEngineKit.CallSessionCallback {
     private AVEngineKit gEngineKit;
     private boolean micEnabled = true;

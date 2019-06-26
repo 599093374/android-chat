@@ -10,6 +10,7 @@ import java.io.File;
 import cn.wildfire.chat.app.third.location.viewholder.LocationMessageContentViewHolder;
 import cn.wildfire.chat.kit.WfcUIKit;
 import cn.wildfire.chat.kit.conversation.message.viewholder.MessageViewHolderManager;
+import cn.wildfire.chat.kit.net.OKHttpHelper;
 
 
 public class MyApp extends BaseApp {
@@ -21,7 +22,7 @@ public class MyApp extends BaseApp {
         super.onCreate();
 
         // bugly，务必替换为你自己的!!!
-        CrashReport.initCrashReport(getApplicationContext(), "34490ba79f", false);
+        CrashReport.initCrashReport(getApplicationContext(), "e724d1a58a", false);
         // 只在主进程初始化
         if (getCurProcessName(this).equals("cn.wildfirechat.chat")) {
             wfcUIKit = new WfcUIKit();

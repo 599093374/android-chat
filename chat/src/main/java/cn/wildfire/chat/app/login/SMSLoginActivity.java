@@ -27,6 +27,11 @@ import cn.wildfire.chat.kit.net.SimpleCallback;
 import cn.wildfire.chat.kit.net.base.StatusResult;
 import cn.wildfirechat.chat.R;
 
+/**
+ * author:xmf
+ * date:2019/6/25 0025
+ * description:登录页面
+ */
 public class SMSLoginActivity extends WfcBaseActivity {
     @Bind(R.id.loginButton)
     Button loginButton;

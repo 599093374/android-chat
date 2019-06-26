@@ -94,7 +94,7 @@ public class ConversationExtension {
             onConversationExtClick(exts.get(index));
         }));
     }
-
+//    public void cn.wildfire.chat.kit.conversation.ext.VoipExt.audio(android.view.View,cn.wildfirechat.model.Conversation)
 
     public void reset() {
         int childCount = containerLayout.getChildCount();
